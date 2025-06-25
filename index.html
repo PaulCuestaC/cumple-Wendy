@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>🎉 Feliz Cumpleaños Wendy 🎉</title>
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Satisfy', cursive;
+      background: linear-gradient(135deg, #40e0d0, #b2ffff);
+      color: #fff;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-top: 2rem;
+      animation: brillar 1.5s infinite alternate;
+      text-shadow: 0 0 15px #fff, 0 0 25px #fff;
+    }
+
+    h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6em;
+  margin: 1rem 2rem;
+  color: #fefefe;
+  text-shadow: 0 0 5px #008080;
+}
+
+    @keyframes brillar {
+      from { text-shadow: 0 0 5px #fff; }
+      to { text-shadow: 0 0 20px #fff, 0 0 30px #fff; }
+    }
+
+    .iconos {
+      font-size: 2.5em;
+      animation: flotar 3s ease-in-out infinite;
+    }
+
+    @keyframes flotar {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .pastel {
+      font-size: 5em;
+      animation: rebotar 2s infinite;
+    }
+
+    @keyframes rebotar {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .confetti {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .confetti div {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #fff;
+      opacity: 0.8;
+      animation: caer 4s linear infinite;
+    }
+
+    @keyframes caer {
+      0% { transform: translateY(-10px) rotate(0deg); }
+      100% { transform: translateY(100vh) rotate(360deg); }
+    }
+
+    .btn-musica {
+      background: linear-gradient(45deg, #ff4081, #ff80ab);
+      color: white;
+      border: none;
+      padding: 15px 35px;
+      border-radius: 50px;
+      font-size: 1.3em;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+      font-family: 'Satisfy', cursive;
+      margin-top: 2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .btn-musica:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    }
+  </style>
+</head>
+<body>
+  <!-- Confetti dinámico -->
+  <div class="confetti"></div>
+
+  <!-- Título -->
+  <h1>🎉 ¡Feliz Cumpleaños Señorita Enfermera! 🎉</h1>
+
+  <!-- Subtítulo personalizado -->
+  <h2>Una gran enfermera 💉⚕️, cantante 🎤 , CL (Chinos Lover o Clarísimamente Linda), 
+    líder, y Wendy (¡Que eso abarca mucho eh!) !Que Dios te Bendiga y te guarde!</h2>
+
+  <!-- Emojis -->
+  <div class="iconos">
+    🩺 💊 🏥 👩‍⚕️ 🧬 💉 🎤 💃 🫶 🌟
+  </div>
+
+  <!-- Pastel animado -->
+  <div class="pastel">🎂</div>
+
+  <!-- Botón para reproducir música -->
+  <button class="btn-musica" onclick="document.getElementById('musica').play()">🎵 ¡Ponle Sabor!</button>
+
+  <!-- Audio (recuerda usar una canción tuya si quieres más control) -->
+  <audio id="musica" loop>
+    <source src="musica1.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+  </audio>
+
+  <!-- Script para generar confetti -->
+  <script>
+    const contenedor = document.querySelector('.confetti');
+    for (let i = 0; i < 100; i++) {
+      const div = document.createElement("div");
+      div.style.left = Math.random() * 100 + "vw";
+      div.style.animationDuration = (3 + Math.random() * 2) + "s";
+      div.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 75%)`;
+      contenedor.appendChild(div);
+    }
+  </script>
+</body>
+</html>
