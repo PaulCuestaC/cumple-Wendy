@@ -15,34 +15,28 @@
       overflow: hidden;
     }
 
-   h1 {
-  font-size: 3em;
-  margin-top: 2rem;
-  background: linear-gradient(270deg, #ff4081, #40e0d0, #ff4081);
-  background-size: 600% 600%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradiente 5s ease infinite;
-}
+    h1 {
+      font-size: 3em;
+      margin-top: 2rem;
+      background: linear-gradient(270deg, #ff4081, #40e0d0, #ff4081);
+      background-size: 600% 600%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradiente 5s ease infinite;
+    }
 
-@keyframes gradiente {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
+    @keyframes gradiente {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
 
     h2 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.6em;
-  margin: 1rem 2rem;
-  color: #fefefe;
-  text-shadow: 0 0 5px #008080;
-}
-
-    @keyframes brillar {
-      from { text-shadow: 0 0 5px #fff; }
-      to { text-shadow: 0 0 20px #fff, 0 0 30px #fff; }
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.6em;
+      margin: 1rem 2rem;
+      color: #fefefe;
+      text-shadow: 0 0 5px #008080;
     }
 
     .iconos {
@@ -100,7 +94,7 @@
       box-shadow: 0 5px 15px rgba(0,0,0,0.3);
       transition: transform 0.3s, box-shadow 0.3s;
       font-family: 'Satisfy', cursive;
-      margin-top: 2rem;
+      margin: 1rem 1rem;
       position: relative;
       z-index: 2;
     }
@@ -109,93 +103,95 @@
       transform: scale(1.05);
       box-shadow: 0 8px 25px rgba(0,0,0,0.4);
     }
+
     .cuadro-scroll {
-  width: 80%;
-  max-width: 600px;
-  margin: 2rem auto;
-  background-color: rgba(255, 255, 255, 0.85);
-  color: #333;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  max-height: 250px;
-  overflow-y: auto;
-  font-family: 'Poppins', sans-serif;
-  text-align: left;
-  z-index: 2;
-  position: relative;
-}
+      width: 80%;
+      max-width: 600px;
+      margin: 2rem auto;
+      background-color: rgba(255, 255, 255, 0.85);
+      color: #333;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      max-height: 250px;
+      overflow-y: auto;
+      font-family: 'Poppins', sans-serif;
+      text-align: left;
+      z-index: 2;
+      position: relative;
+      display: none;
+      animation: aparecer 0.8s ease forwards;
+    }
 
-.cuadro-scroll h3 {
-  margin-top: 0;
-  color: #008080;
-  font-size: 1.5em;
-  text-align: center;
-}
-
-.cuadro-scroll ul {
-  padding-left: 20px;
-  list-style-type: square;
-}
     @keyframes aparecer {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-.cuadro-scroll {
-  display: none; /* Oculto al inicio */
-  animation: aparecer 0.8s ease forwards;
-}
+    .cuadro-scroll h3 {
+      margin-top: 0;
+      color: #008080;
+      font-size: 1.5em;
+      text-align: center;
+    }
+
+    .cuadro-scroll ul {
+      padding-left: 20px;
+      list-style-type: square;
+    }
   </style>
 </head>
 <body>
-  <!-- Confetti dinámico -->
   <div class="confetti"></div>
 
-  <!-- Título -->
   <h1>🎉 ¡Feliz Cumpleaños Señorita Enfermera! 🎉</h1>
 
-  <!-- Subtítulo personalizado -->
   <h2>Una gran enfermera 💉⚕️, cantante 🎤 , CL (Chinos Lover o Clarísimamente Linda), 
-    líder, y Wendy (¡Que eso abarca mucho eh!) !Que Dios te Bendiga y te guarde!</h2>
+    líder, y Wendy (¡Que eso abarca mucho eh!) ¡Que Dios te bendiga y te guarde!</h2>
 
-  <!-- Emojis -->
   <div class="iconos">
     🩺 💊 🏥 👩‍⚕️ 🧬 💉 🎤 💃 🫶 🌟
   </div>
+
+  <!-- Botón para mostrar Enciclopedia -->
   <button id="btn-enciclopedia" class="btn-musica" onclick="mostrarEnciclopedia()">📖 Enciclopedia Wendy</button>
 
-<div class="cuadro-scroll">
-  <h3>Enciclopedia Wendy Junior:</h3>
-  <ul>
-    <li>W: Wonder Woman 🦸‍♀️</li>
-    <li>E: Enérgica ⚡</li>
-    <li>N: Noble 💖</li>
-    <li>D: Decidida 🎯</li>
-    <li>Y: Yapa siempre 😄</li>
-    <!-- Aquí puedes seguir pegando lo que copiaste desde Word -->
-  </ul>
-</div>
-
-  <!-- Pastel animado -->
-  <div class="pastel">🎂</div>
-
-  <!-- Botón para reproducir música -->
+  <!-- Botón para música -->
   <button class="btn-musica" onclick="document.getElementById('musica').play()">🎵 ¡Ponle Sabor!</button>
 
-  <!-- Audio (recuerda usar una canción tuya si quieres más control) -->
+  <!-- Cuadro oculto con scroll -->
+  <div class="cuadro-scroll" id="cuadro-wendy">
+    <h3>Enciclopedia Wendy Junior:</h3>
+    <ul>
+      <li>W: Wonder Woman 🦸‍♀️</li>
+      <li>E: Enérgica ⚡</li>
+      <li>N: Noble 💖</li>
+      <li>D: Decidida 🎯</li>
+      <li>Y: Yapa siempre 😄</li>
+    </ul>
+  </div>
+
+  <!-- Pastel -->
+  <div class="pastel">🎂</div>
+
+  <!-- Música principal -->
   <audio id="musica" loop>
     <source src="musica2.mp3" type="audio/mpeg">
     Tu navegador no soporta audio.
   </audio>
 
-  <!-- Script para generar confetti -->
+  <!-- Sonido de libro -->
+  <audio id="libro" preload="auto">
+    <source src="https://cdn.pixabay.com/audio/2023/04/06/audio_0d808b520a.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- Confetti dinámico -->
   <script>
     const contenedor = document.querySelector('.confetti');
     for (let i = 0; i < 100; i++) {
@@ -205,13 +201,16 @@
       div.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 75%)`;
       contenedor.appendChild(div);
     }
-  </script>
-  <script>
-  function mostrarEnciclopedia() {
-    document.querySelector('.cuadro-scroll').style.display = 'block';
-    document.getElementById('btn-enciclopedia').style.display = 'none';
-  }
-</script>
 
+    function mostrarEnciclopedia() {
+      const cuadro = document.getElementById('cuadro-wendy');
+      const boton = document.getElementById('btn-enciclopedia');
+      const sonido = document.getElementById('libro');
+      cuadro.style.display = 'block';
+      boton.style.display = 'none';
+      sonido.play();
+    }
+  </script>
 </body>
 </html>
+
