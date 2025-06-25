@@ -137,6 +137,21 @@
   padding-left: 20px;
   list-style-type: square;
 }
+    @keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cuadro-scroll {
+  display: none; /* Oculto al inicio */
+  animation: aparecer 0.8s ease forwards;
+}
   </style>
 </head>
 <body>
@@ -154,6 +169,8 @@
   <div class="iconos">
     🩺 💊 🏥 👩‍⚕️ 🧬 💉 🎤 💃 🫶 🌟
   </div>
+  <button id="btn-enciclopedia" class="btn-musica" onclick="mostrarEnciclopedia()">📖 Enciclopedia Wendy</button>
+
 <div class="cuadro-scroll">
   <h3>Enciclopedia Wendy Junior:</h3>
   <ul>
@@ -189,5 +206,12 @@
       contenedor.appendChild(div);
     }
   </script>
+  <script>
+  function mostrarEnciclopedia() {
+    document.querySelector('.cuadro-scroll').style.display = 'block';
+    document.getElementById('btn-enciclopedia').style.display = 'none';
+  }
+</script>
+
 </body>
 </html>
